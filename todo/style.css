@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+  }
+
+
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+  }
+  .bgs img{
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .bgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+  .bgs img{
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    
+  }
+  .main {
+    position: relative;
+    width: 80%;
+    height: 450px;
+    padding: 15px;
+    top: -98vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0.1px 3px 30px 1.5px rgba(0, 0, 0, 0.5);
+    z-index: 199;
+  }
+  .main h1 {
+    margin-bottom: 1em;
+  }
+  .main #default_text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  .main #total_task {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  .floating_menu {
+    position: absolute;
+    left: 15px;
+    bottom: -100%;
+    min-height: 30%;
+    width: 31%;
+    padding: 10px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0.1px 3px 30px 1.5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  #hide_menu {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #1c2833;
+    font-size: 2.5em;
+  }
+  .floating_menu_active {
+    bottom: 0%;
+  }
+  #floating_btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #cbd5e1;
+    border-radius: 50%;
+    font-size: 2em;
+    color: #1c2833;
+    box-shadow: 0.1px 3px 18px 1.5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*form part*/
+  form {
+    height: 60%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  form input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .buttons {
+    width: 100%;
+    text-align: right;
+  }
+  .buttons button {
+    width: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #1c2833;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 0.1px 3px 12px 1.5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #add_todo {
+    background: #52be80;
+    margin-left: 10px;
+  }
+  #clear_text_box {
+    background: #ec7063;
+  }
+  #clear_text_box i {
+    transform: rotate(45deg);
+  }
+  
+  /*task list*/
+  .display_task {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-template-rows: repeat(2, 130px);
+    grid-gap: 10px;
+    max-height: 85%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .task {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+  .task .delete_todo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #3899ca;
+    padding: 0 6px;
+    border-radius: 5px;
+    background: #f8fafc;
+  }
+  .task h2,
+  p {
+    color: #1c2833;
+  }
+  .task h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 1rem;
+    width: 20rem;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: .5rem 1.5rem;
+    border-radius: .25rem;
+    bottom: 10px;
+  }
+  .footer a{
+    text-decoration: none;
+    
+  }
+  .footer a i{
+    font-size: 2.25rem;
+    cursor: pointer;
+  }
+
+  .footer a i.you{
+    color: rgb(234, 69, 69);
+  }
+  .footer a i.git{
+    color: rgb(23, 23, 23);
+  }
+  .footer a i.inst{
+    color: rgb(255, 88, 88);
+  }
+
+
+
+
+  @media (max-width: 700px) {
+    .main {
+      height: 90vh;
+    }
+    .display_task {
+      grid-template-columns: 100%;
+    }
+    .floating_menu {
+      width: 95%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

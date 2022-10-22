@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Advance Todo List || teddy-webdev</title>
+
+      <!-- Remix Icon CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="logo-no-bg.png"  type="image/x-icon">
+      <meta name="viewport" content="width=device-width , initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+    <div class="bgs">
+        <img src="bg.jpeg" alt="">
+    </div>
+      <div class="main">
+         <h1 id="default_text">No task is available <i class='bx bx-task-x'></i></h1>
+         <h1>My Day</h1>
+         <h1 id="total_task"><i class='bx bx-task'></i> 1</h1>
+         <div class="display_task">
+            <div class="task" id="todo_1">
+               <h2>Task 1</h2>
+               <p>Make Today so awesome that yesterday gets jealous <br><i class="ri-bear-smile-line"></i><i class="ri-bear-smile-fill"></i><i class="ri-bear-smile-line"></i></p>
+               <span class="delete_todo"><i class="ri-check-double-fill"></i></span>
+            </div> 
+            
+         </div>
+         <button id="floating_btn"><i class='bx bx-plus'></i></button>
+         <div class="floating_menu">
+            <button id="hide_menu"><i class='bx bx-chevron-down'></i></button>
+            <form class="form">
+               <input type="text" name="task_title" placeholder="Task Title" autocomplete="off">
+               <input type="text" name="task_description" placeholder="Task Description" autocomplete="off">
+               <div class="buttons">
+                  <button id="clear_text_box"><i class='bx bx-plus'></i></button>
+                  <button id="add_todo"><i class='bx bx-plus'></i></button>
+               </div>
+            </form>
+         </div>
+      </div>
+      <footer class="footer container">
+       
+            <a href="https://www.youtube.com/c/OhDearTeddy">
+                <i class="ri-youtube-line you"></i>
+            </a>
+            <a href="https://github.com/teddy-webdev/">
+                <i class="ri-github-fill git"></i>
+            </a>
+            <a href="https://www.instagram.com/oh.dear.teddy/">
+                <i class="ri-instagram-line inst"></i>
+            </a>
+        
+    </footer>
+      <script src="main.js"></script>
+   </body>
+</html>
