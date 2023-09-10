@@ -4,8 +4,7 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
   }
-
-
+  
   body {
     display: grid;
     place-items: center;
@@ -13,31 +12,24 @@
     overflow: hidden;
 
   }
-  .bgs img{
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
+
   .bgs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
   }
+
   .bgs img{
     height: 100vh;
-    width: auto;
+    width: 100%;
     object-fit: cover;
-    
   }
+
   .main {
     position: relative;
     width: 80%;
-    height: 450px;
-    padding: 15px;
+    height: 85vh;
+    padding: 15px 15px 15px 20px;
     top: -98vh;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(3px);
@@ -67,7 +59,7 @@
     left: 15px;
     bottom: -100%;
     min-height: 30%;
-    width: 31%;
+    width: 80%;
     padding: 10px;
     transition: 0.5s;
     display: flex;
@@ -194,7 +186,7 @@
     gap: 1rem;
     width: 20rem;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     padding: .5rem 1.5rem;
     border-radius: .25rem;
@@ -210,7 +202,7 @@
   }
 
   .footer a i.you{
-    color: rgb(234, 69, 69);
+    color: rgb(255, 0, 0);
   }
   .footer a i.git{
     color: rgb(23, 23, 23);
@@ -224,7 +216,7 @@
 
   @media (max-width: 700px) {
     .main {
-      height: 90vh;
+      height: 85vh;
     }
     .display_task {
       grid-template-columns: 100%;
